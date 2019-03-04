@@ -13,7 +13,8 @@ phases:
     commands:
       - ./node_modules/.bin/sls deploy --app spa
       - ./node_modules/.bin/sls syncToS3 --app spa
-      - ./node_modules/.bin/sls invalidateCache --app spa
+      - ./node_modules/.bin/sls invalidateCloudFrontCache --app spa
+      - ./node_modules/.bin/sls domainInfo --app spa
 artifacts:
   files:
     - '**/*'
