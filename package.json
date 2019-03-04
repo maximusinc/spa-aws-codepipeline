@@ -23,6 +23,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "serverless": "^1.38.0"
+    "serverless": "^1.38.0",
+    "serverless-single-page-app-plugin": "file:./utils/serverless-single-page-app-plugin"
   }
 }
