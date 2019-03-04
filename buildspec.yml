@@ -9,6 +9,11 @@ phases:
     commands:
       - echo Build started on `date`
       - npm run build
+  post_build:
+    commands:
+      - sls deploy --app spa
+      - sls syncToS3 --app spa
+      - sls invalidateCache --app spa
 artifacts:
   files:
     - '**/*'
